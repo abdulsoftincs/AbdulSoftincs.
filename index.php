@@ -398,8 +398,9 @@ if (isset($_POST['submit'])) {
 <!-- ------------------------------------------------------------------------------------------- -->
     <footer>
         <span>Created By <a href="#">Abdul Softincs.</a><span class="fa fa-copyright"></span>
-                2020 All rights reserved.
+                2020 All rights reserved.snmkjlnan acm, amjxnkz
         </span>
+        <button>HLO</button>
         </footer>
 <!-- ------------------------------------------------------------------------------------------- -->
 
