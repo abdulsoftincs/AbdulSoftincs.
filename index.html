@@ -1,61 +1,8 @@
-<?php
-
-
-    $server = " sql200.epizy.com";
-    $username = "epiz_26834720	";
-    $password = "UsJ6hJl2WvuQn7D";
-    $dbname = "epiz_26834720_abdulsoftincs	";
-
-    $result = "";
-
-if (isset($_POST['submit'])) {
-    require 'phpmailer/PHPMailerAutoload.php';
-    $mail = new PHPMailer(true);
-   
-   
-    $mail->Host='smtp.gmail.com';
-    $mail->Port='587';
-    $mail->SMTPAuth='true';
-    $mail->SMTPSecure='tls';
-    $mail->Username='abdurrehman7866786@gmail.com';
-
-    $mail->setfrom($_POST['email'],$_POST['name']);
-    $mail->addAddress('abdurrehman7866786@gmail.com');
-    $mail->AddReplyto($_POST['email'],$_POST['name']);
-
-
-    $mail->isHTML(true);
-    $mail->Subject= 'Form Submission: '.$_POST['subject'];
-    $mail->Body= '<h1 align=center>Name : '.$_POST['name'].'<br>Email:'.$_POST['email'].'<br>Subject:'.$_POST['subject'].'<br    
-    >Message: '.$_POST['message'].'</h1>';
- 
-
-    if(!$mail->send()) {
-    # code...
-    $result="Something Went Wrong . please try again later...";
-
-
-}
-        else {
-            $result="Thanks For Contacting Us We Will Response soon..!";
-            function function_alert($message) { 
-      
-         echo "<script>alert('$message');</script>"; 
-            } 
-               
-            function_alert("Thanks For Contacting Us We Will Response soon..!"); 
-              
-        }
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
-    <link rel="icon" href="logo1.png" type="image/png" sizes="16x16">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.js">
@@ -138,7 +85,7 @@ if (isset($_POST['submit'])) {
             perspiciatis quibusdam. Tempora delectus dolor, nisi necessitatibus aut perspiciatis consequuntur 
             blanditiis unde.
         </p>    
-        <a href="CV.docx">Download CV</a>
+        <a href="Abdulrehman Azam (CV).docx">Download CV</a>
 
                     
 
@@ -368,9 +315,9 @@ if (isset($_POST['submit'])) {
     
     <div class="column right">
         <div class="text">Message Me</div>
-        <form action="#" class="contact-form" method="post">
-        <?   $result = ""; ?>
+        <form action="index.php" class="contact-form" method="post">
             <div class="fields">
+                
                 <div class="field name">
                     <input name="name" type="text" placeholder="Name" class="form-control" required>
                 </div>
@@ -385,17 +332,17 @@ if (isset($_POST['submit'])) {
                 <div class="field textarea ">
                     <textarea name="message" cols="30" rows="10" placeholder="Send FeedBack" class="form-control" required></textarea>
                 </div>
-                
+              
                 <div class="button">
                     <button type="submit"  value="Send" class="btn btn-danger btn-block" id="sendBtn"  name="submit" class="form-control submit" value="SEND MESSAGE">
                         Submit
                     </button>
                 
-                </div>
+                </div>  
+              
         </form>
-    </div>
 
-
+</div>
 </div>
 </div>
 </section>
@@ -403,9 +350,8 @@ if (isset($_POST['submit'])) {
 <!-- ------------------------------------------------------------------------------------------- -->
     <footer>
         <span>Created By <a href="#">Abdul Softincs.</a><span class="fa fa-copyright"></span>
-                2020 All rights reserved.snmkjlnan acm, amjxnkz
+                2020 All rights reserved.
         </span>
-        <button>HLO</button>
         </footer>
 <!-- ------------------------------------------------------------------------------------------- -->
 
